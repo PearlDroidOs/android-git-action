@@ -9,11 +9,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        //Temp test
-        //Temp test 2
-
-
-        //Temp newest
+        //Temp test ja
 
     }
 }
