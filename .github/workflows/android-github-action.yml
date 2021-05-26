@@ -3,18 +3,19 @@ name: android-github-action
 on: pull-request
 
 jobs:
-  check-bats-version:
+  build-test:
     runs-on: ubuntu-lastest
+
     steps:
       - uses: action/checkout@v1
 
       - name: Set Up JDK
-        - uses: action/setup-java@v1
-        - with:
-            java-version: 1.8
+        uses: action/setup-java@v1
+        with:
+          java-version: 1.8
 
       - name: Run gradlew
-        - run: ./gradlew test
+          run: ./gradlew test
 
       - name: Build Project
-        - run: ./gradlew assemble
+          run: ./gradlew assemble
